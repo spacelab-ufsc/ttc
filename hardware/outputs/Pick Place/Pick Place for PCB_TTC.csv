@@ -1,0 +1,51 @@
+Altium Designer Pick and Place Locations
+C:\Users\sara\Documents\PCB\PCB_Project_TTC_ALT_RF4463F30\Project Outputs for PCB_Project_TTC_Alt_RF4463F30\Pick Place for PCB_TTC_RF4463F30.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       16/08/18
+Time:       23:17
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+"Designator,""Comment"",""Layer"",""Footprint"",""Center-X(mil)"",""Center-Y(mil)"",""Rotation"",""Description"""
+"U1,""RF4463F30"",""TopLayer"",""RF4463F30"",""2464.567"",""962.205"",""360"",""RF4463F30 High Power Wireless Transceiver Module"""
+"P3,""Header 2"",""TopLayer"",""HDR_1X2"",""402.362"",""3420.866"",""360"",""Header, 2-Pin"""
+"C2,""0.47uF/50V"",""TopLayer"",""CC0603"",""2537.402"",""2002.756"",""270"",""CAP CER 0.47UF 50V 10% X7R 0603"""
+"C12,""10uF/10V"",""TopLayer"",""CC0805_Tantalum"",""1933.071"",""2288.189"",""315"",""CAP Tantalum 10uF 6.3V 10% 0805"""
+"C9,""0.1uF/50V"",""TopLayer"",""CC0603"",""1996.457"",""2312.599"",""315"",""CAP CER 0.1UF 50V 10% X7R 0603"""
+"C5,""10uF/10V"",""TopLayer"",""CC0805_Tantalum"",""2074.803"",""2759.449"",""225"",""CAP Tantalum 10uF 6.3V 10% 0805"""
+"C14,""10uF/10V"",""TopLayer"",""CC0805_Tantalum"",""2728.740"",""2806.693"",""315"",""CAP Tantalum 10uF 6.3V 10% 0805"""
+"C6,""0.1uF/50V"",""TopLayer"",""CC0603"",""2118.110"",""2715.354"",""225"",""CAP CER 0.1UF 50V 10% X7R 0603"""
+"C11,""0.1uF/50V"",""TopLayer"",""CC0603"",""2685.433"",""2758.268"",""315"",""CAP CER 0.1UF 50V 10% X7R 0603"""
+"C7,""10uF/10V"",""TopLayer"",""CC0805_Tantalum"",""2404.331"",""1911.417"",""0"",""CAP Tantalum 10uF 6.3V 10% 0805"""
+"C13,""10uF/10V"",""TopLayer"",""CC0805_Tantalum"",""2026.378"",""2186.614"",""315"",""CAP Tantalum 10uF 6.3V 10% 0805"""
+"C3,""0.1uF/50V"",""TopLayer"",""CC0603"",""2408.268"",""1975.197"",""0"",""CAP CER 0.1UF 50V 10% X7R 0603"""
+"C10,""0.1uF/50V"",""TopLayer"",""CC0603"",""2079.921"",""2218.504"",""315"",""CAP CER 0.1UF 50V 10% X7R 0603"""
+"C8,""2.2nF/25V"",""TopLayer"",""CC0603"",""1760.236"",""2961.811"",""180"",""CAP CER 0.047UF 25V 0603"""
+"C1,""12pF/50V"",""TopLayer"",""CC0603"",""1918.898"",""2014.567"",""45"",""CAP CER 12pF 50V 0603"""
+"C4,""12pF/50V"",""TopLayer"",""CC0603"",""1973.622"",""1959.055"",""45"",""CAP CER 12pF 50V 0603"""
+"D2,""Green"",""TopLayer"",""0603-LED"",""1640.945"",""2795.669"",""360"",""SMD Green LED"""
+"D1,""RED"",""TopLayer"",""0603-LED"",""2648.425"",""1903.543"",""270"",""SMD Red LED"""
+"FB1,""30R@100Mhz, 10A"",""TopLayer"",""IND1210"",""3081.102"",""129.134"",""180"",""Ferrite Bead 30 OHM 10A 100MHz"""
+"P1,""Header 6H_PicoBlade"",""TopLayer"",""HDR6_PicoBlade"",""2815.945"",""3341.339"",""180"",""Header, 6-Pin, Right Angle"""
+"P5,""Header 6H_PicoBlade"",""TopLayer"",""HDR6_PicoBlade"",""1232.874"",""3331.496"",""180"",""Header, 6-Pin, Right Angle"""
+"P2,""Header 2"",""TopLayer"",""HDR_1X2"",""694.882"",""3420.866"",""180"",""Header, 2-Pin"""
+"P4,""Header 2"",""TopLayer"",""HDR_1X2"",""1420.079"",""3086.614"",""180"",""Header, 2-Pin"""
+"P6,""Tactile Switch"",""TopLayer"",""B3U-1000P"",""1711.417"",""3107.874"",""360"",""Tactile Switches Tactile Switch SPST-NO Top Actuated Surface Mount"""
+"R1,""0R"",""TopLayer"",""1206"",""1433.858"",""2903.150"",""360"",""RES 0.0 OHM 1/2W JUMP 1206"""
+"R5,""1k"",""TopLayer"",""0603"",""1531.102"",""2796.063"",""360"",""RES 1.0K OHM 1/8W 1% 0603"""
+"R4,""330R"",""TopLayer"",""0603"",""2648.425"",""2006.634"",""270"",""RES 330R OHM 1/4W 1% 0603"""
+"R6,""47k"",""TopLayer"",""0603"",""1761.811"",""3024.016"",""180"",""RES 47K OHM 1/8W 0.5% 0603"""
+"R2,""10k"",""TopLayer"",""0603"",""2872.047"",""3180.315"",""180"",""RES 10K OHM 1/8W 1%  0603"""
+"R3,""10k"",""TopLayer"",""0603"",""2761.024"",""3180.315"",""360"",""RES 10K OHM 1/8W 1%  0603"""
+"U2,""RF4463F30"",""TopLayer"",""RF4463F30"",""934.646"",""962.205"",""360"",""RF4463F30 High Power Wireless Transceiver Module"""
+"Y1,""Coaxial_Connectors_90º"",""TopLayer"",""CONN_MCX_JACK__R/A__50_OHM_SMD_-_DUPLICATE"",""214.567"",""1513.386"",""180"",""CONN MCX JACK R/A 50OHM SMD"""
+"Y2,""Coaxial_Connectors_90º"",""TopLayer"",""CONN_MCX_JACK__R/A__50_OHM_SMD_-_DUPLICATE"",""1731.890"",""1513.386"",""180"",""CONN MCX JACK R/A 50OHM SMD"""
+"Y4,""4MHz"",""TopLayer"",""XTAL_CSTCE_G15L"",""2056.299"",""2923.228"",""225"",""CER RESONATOR  4MHz SMD Murata"""
+"Y3,""32.768kHz 12.5pF"",""TopLayer"",""ABS06_0805"",""2009.449"",""2048.819"",""315"",""CRYSTAL 32.768KHZ 12.5PF SMD"""
+"JP1,""Header 7X2"",""TopLayer"",""HDR2X7"",""2027.165"",""3361.811"",""360"",""Header, 7-Pin, Dual row"""
+"U3,""PC104"",""BottomLayer"",""PC104"",""3351.173"",""1743.039"",""90"",""PC104"""
+"U4,""MSP430F6659IPZR"",""TopLayer"",""PZ0100A_N"",""2412.205"",""2465.354"",""45"",""Imported"""
