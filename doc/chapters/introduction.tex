@@ -1,0 +1,166 @@
+%
+% introduction.tex
+%
+% Copyright (C) 2021 by SpaceLab.
+%
+% TTC Documentation
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
+% International License. To view a copy of this license,
+% visit http://creativecommons.org/licenses/by-sa/4.0/.
+%
+
+%
+% \brief Introduction chapter.
+%
+% \author Gabriel Mariano Marcelino <gabriel.mm8@gmail.com>
+%
+% \institution Universidade Federal de Santa Catarina (UFSC)
+%
+% \version 1.2.0
+%
+% \date 2021/01/16
+%
+
+\chapter{Introduction} \label{ch:introduction}
+
+This document is the general documentation of the Telemetry, Tracking and Command module of the FloripaSat project.
+
+The TTC\nomenclature{\textbf{TTC}}{Telemetry, Tracking and Command.} (or TT\&C) is the communication module of the FloripaSat\cite{site} cubesat. It is responsible to make the communication between the earth (A ground station) and the satellite, and is divided in two sub-modules: Beacon and telemetry.
+
+The beacon is a independent sub-module who transmits a periodic signal containing an identification data (ID) of the satellite and some basic telemetry data.
+
+The telemetry sub-module is the main communication device. It has a bidirectional data link to receive telecommands from the earth and transmit all the requested data.
+
+The telemetry sub-module is controlled by the OBDH\nomenclature{\textbf{OBDH}}{Onboard Data Handling.} module (The OBC\nomenclature{\textbf{OBC}}{Onboard Computer.} of the satellite), and the software for handling with this sub-module is under development in the OBDH module, and is not documented here.
+
+\nomenclature{\textbf{PCB}}{Printed Circuit Board.}
+\nomenclature{\textbf{USB}}{Universal Serial Bus.}
+
+\cite{github}
+
+The beacon executes the following tasks during its execution:
+
+\begin{itemize}
+	\item 145 MHz band antenna deployment.
+	\item One-way communication (RX) with the EPS module, using the FSP protocol.
+	\item Two-way communication (TX and RX) with the OBDH module, using the FSP protocol.
+	\item Transmission of the beacon packets (In two protocols: NGHam and AX.25), containing the data from the EPS or the OBDH module and the satellite ID (``FLORIPASAT").
+	\item When required by the OBDH module, the transmissions are stopped for an hibernation period (shutdown).
+	\item In case of an critical failure of the OBDH module, or the uplink channel, the beacon activates its reception and is capable of make its own hibernation (shutdown).
+\end{itemize}
+
+\section{Module Requirements}
+
+In the list below, the TTC module requirements for the mission are described. These requirements are nominated as TMR\nomenclature{\textbf{TMR}}{Telemetry, Tracking and Command Module Requirements.}, or Telemetry, Tracking and Command Module Requirements.
+
+\begin{enumerate}[label=\textit{TMR \arabic*}, leftmargin=*, align=left]
+	\item The FloripaSat shall have a physical device to inhibit radio frequency (RF\nomenclature{\textbf{RF}}{Radio Frequency.}) transmission.
+	
+	\begin{footnotesize}
+		Compliance with CDS\nomenclature{\textbf{CDS}}{CubeSat Design Specification.} 3.3.9: The use of three independent inhibits is highly recommended and can reduce required documentation and analysis.	
+	\end{footnotesize}
+	
+	\item The CubeSat will have the RF power output to the transmitting antenna input no greater than 1,5 W.
+	
+	\begin{footnotesize}
+		Compliance with CDS 3.3.9.1.
+	\end{footnotesize}
+	
+	\item The CubeSat will have the RF power output to the transmitting antenna input no less than 1,0 W (or 30 dBm).
+	
+	\begin{footnotesize}
+		Defined by team analysis.
+	\end{footnotesize}
+	\item No CubeSats shall generate or transmit any RF signal from the time of integration into the P-POD\nomenclature{\textbf{P-POD}}{Poly-Picosatellite Orbital Deployer.} through 45 minutes after on-orbit deployment from the P-POD.
+	
+	\begin{footnotesize}
+		Compliance with CDS.
+	\end{footnotesize}
+	
+	\item TTC transceiver shall transmit and receive on the frequency of 437,9 Mhz.
+	
+	\begin{footnotesize}
+		Defined by the team, based on available spectrum allocation to Amateur communication.
+	\end{footnotesize}
+	
+	\item TTC beacon shall transmit on the frequency of 145,9 Mhz.
+	
+	\begin{footnotesize}
+		Defined by the team, based on available spectrum allocation to Amateur communication.
+	\end{footnotesize}
+	
+	\item TTC shall modulate and demodulate information using GFSK\nomenclature{\textbf{GFSK}}{Gaussian Frequency-Shift Keyring.}.
+	
+	\begin{footnotesize}
+		Defined by the team.
+	\end{footnotesize}
+	
+	\item TTC Beacon must transmit periodic beacon messages at an interval of 10
+seconds, except when in hibernation or shutdown mode. Allows ground stations to track and receive satellite data even if telecommand was not sent to the satellite.
+	\item TTC transceiver must receive signals from ground stations and demodulate them.
+	\item TTC must interface with OBDH, exchanging encoded raw data received or to be transmitted.
+	\item TTC must interface with OBDH using the SPI protocol ($@$2 KHz).
+	
+	\begin{footnotesize}
+		Defined by the team.
+	\end{footnotesize}
+	
+	\item TTC radio must modulate raw data received from OBDH using GFSK, prior to transmission, and demodulate received data and forward raw data to OBDH.
+	\item TTC transceiver shall transmit and receive data at a baud rate of 2400 bps. Defined by the team, based on link budget analysis.
+	\item TTC beacon shall transmit data at a baud rate of 1200 bps.
+	
+	\begin{footnotesize}
+		Defined by the team, based on link budget analysis.
+	\end{footnotesize}
+	
+	\item TTC beacon shall transmit packets using the NGHam and AX.25 protocols.
+	
+	\begin{footnotesize}
+		Defined by the team.
+	\end{footnotesize}
+	
+	\item A same beacon packet must be transmitted in both NGHam and AX.25 protocols.
+	
+	\begin{footnotesize}
+		Defined by the team.
+	\end{footnotesize}
+	
+	\item TTC must receive the batteries voltages from the EPS module at every 10 seconds.
+	
+	\begin{footnotesize}
+		Defined by the team.
+	\end{footnotesize}
+	
+	\item The payload from the packets transmitted by the beacon must contain at least the satellite ID ("FLORIPASAT") and batteries voltages (received from the EPS module at every 10 seconds).
+	\item TTC uC must perform the antenna deployment of the VHF band antenna.
+	
+	\begin{footnotesize}
+		Defined by the team.
+	\end{footnotesize}
+	
+	\item Between the beacon packets transmissions, the beacon MCU and radio must operate in low power mode, to save energy.
+	
+	\begin{footnotesize}
+		Defined by the team.
+	\end{footnotesize}
+	
+	\item TTC PAs (Power amplifiers) must just only be activated during transmissions. When they are not in operation, they must be turned off.
+	
+	\begin{footnotesize}
+		Defined by the team.
+	\end{footnotesize}
+	
+	\item All the beacon critical data, like time control and antenna deployment status, must be stored in a non-volatile memory.
+	
+	\begin{footnotesize}
+		Defined by the team.
+	\end{footnotesize}
+	
+	\item TTC beacon must be able to receive a 24 hour shutdown command from the OBDH module.
+	
+	\begin{footnotesize}
+		Compliance with AMSAT/IARU regulations.
+	\end{footnotesize}
+	
+\end{enumerate}
