@@ -54,4 +54,4 @@ This project is open-source under three different licenses: GNU General Public L
 
 ## Releases
 
-The TTC software and hardware releases are synchronized in order to garantee compatibility. Then, using diferent versions might lead to unpredictable behavior. Refer to the [documentation](https://github.com/spacelab-ufsc/obdh2/tree/master/doc) for compatibility notes.
+The TTC software and hardware releases are synchronized in order to garantee compatibility. Then, using diferent versions might lead to unpredictable behavior. Refer to the [documentation](https://github.com/spacelab-ufsc/ttc/tree/master/doc) for compatibility notes.
