@@ -1,9 +1,9 @@
 <h1 align="center">
-    TTC DOCUMENTATION
+    TTC FIRMWARE
     <br>
 </h1>
 
-<h4 align="center">Documentation of the TTC Module.</h4>
+<h4 align="center">Firmware of the TTC Module.</h4>
 
 <p align="center">
     <a href="https://github.com/spacelab-ufsc/spacelab#versioning">

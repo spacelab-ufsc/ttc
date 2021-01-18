@@ -39,7 +39,7 @@
 </p>
 
 <p align="center">
-    <img src="https://github.com/spacelab-ufsc/ttc/blob/master/doc/figures/ttc_board.png">
+    <img width="70%" src="https://github.com/spacelab-ufsc/ttc/blob/master/doc/figures/ttc_board.png">
 </p>
 
 ## Overview
